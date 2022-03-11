@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="posicao">
+        <div id="indice">
+            <img src="imagens/8th-hokage-featured_bfjx.jpg" alt="imagen de perfil" >
+            <header>
+                <ul>
+                    <li class="espaco">
+                        <a href="#" onclick="exibirConteudo(event, 'sobre')">Sobre</a>
+                    </li>
+                    <li class="espaco">
+                        <a href="#" onclick="exibirConteudo(event, 'conhecimento')">Conhecimentos</a>
+                    </li>
+                    <li class="espaco">
+                        <a href="#" onclick="exibirConteudo(event, 'objetivo')">Objetivo</a>
+                    </li>
+                    <li>
+                        <a href="comentarios.html">Comentários</a>
+                    </li>
+                </ul>
+            </header>
+        </div>
+        <div id="sobre">
+            <main>
+                <section>
+                    <h1>Vinicius <span class="laranja">Birreik Ribeiro</span></h1>
+                    <br>
+                    <p>Rua Coronel Pedroso, 75, Santa Marta, Camaquã-RS viniciusbirreik@gmail.com</p>
+                    <br>
+                    <p id="conteudo"></p>
+                </section>
+                <div id="redes">
+                    <a href="#"><img src="imagens/icon-discord.png" alt="icone do discord" class="icones"></a>
+                    <a href="https://www.instagram.com/viniciusbirreik/" target="_blank"><img src="imagens/icon-insta.png" alt="icone do instagram" class="icones"></a>
+                    <a href="#"><img src="imagens/icon-wats.png" alt="icone do whats app" class="icones"></a>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
