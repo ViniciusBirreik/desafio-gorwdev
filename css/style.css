@@ -120,4 +120,5 @@ header {
 .cabecalho {
     height: 100px;
     background-color: #ffa600d2;
+    padding-top: 20px;
 }

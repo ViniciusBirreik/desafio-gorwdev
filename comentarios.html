@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,14 +10,25 @@
 </head>
 <body>
     <div class="cabecalho">
-        <header>
-            <table class="table">
-                <thead>
-                    <th class="col-4">Nome</th>
-                    <th class="col-8">comentário</th>
-                </thead>
-            </table>
+        <div class="container">
+            <div class="row">
+                <input type="text" placeholder="nome" class="col-3" id="nome">
+                <input type="text" placeholder="comentário" class="col-7 offset-1" id="comentario">
+                <div class="col-1 btn btn-primary" onclick="adicionarComentarios()">Salvar</div>
+            </div>
         </header>
+        <table class="table">
+            <thead>
+                <th class="col-2">#</th>
+                <th class="col-4">Descrição</th>
+                <th class="col-4">Detalhamento</th>
+                <th class="col-2">Ação</th>
+            </thead>
+            <tbody id="table-body">
+
+            </tbody>
+        </table>
     </div>
+    <script src="js/scripts.js"></script>
 </body>
 </html>

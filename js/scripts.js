@@ -18,3 +18,65 @@ function exibirConteudo(event, content){
             break;
     }
 }
+
+const pegarNome = JSON.parse(localStorage.getItem('nome')) || []
+const nome = document.getElementById('nome')
+const pegarComentario = JSON.parse(localStorage.getItem('comentario')) || []
+const comentario = document.getElementById('comentario')
+const tableBody = document.getElementById('table-body')
+const comentarios = JSON.parse(localStorage.getItem('comentarios')) || []
+
+function adicionarComentarios() {
+    pegarNome.push(nome.value)
+    pegarComentario.push(comentario.value)
+    const obj = {
+        comentario: pegarComentario.splice(pegarComentario.length - 1, 1),
+        nome: pegarNome.splice(pegarNome.length - 1, 1)
+    }
+
+    comentarios.push(obj)
+    exibir()
+    salvar()
+}
+
+function salvar() {
+    localStorage.setItem('nome', JSON.stringify(pegarNome))
+    localStorage.setItem('comentario', JSON.stringify(pegarComentario))
+    localStorage.setItem('comentarios', JSON.stringify(comentarios))
+}
+
+function exibir() {
+    tableBody.innerText = ''
+    for(item of comentarios) {
+        console.log(item)
+        const tr = document.createElement('tr')
+        const th = document.createElement('th')
+        const td2 = document.createElement('td')
+        const td3 = document.createElement('td')
+        const td1 = document.createElement('td')
+
+        const position = comentarios.indexOf(item)
+
+        th.setAttribute('scope', 'row')
+        th.setAttribute('class', 'text-center')
+        td1.setAttribute('class', 'text-center info')
+        td2.setAttribute('class', 'text-center info')
+        td3.setAttribute('class', 'text-center d-flex align-items-center justify-content-around')
+        containerButton.setAttribute('class', 'd-flex flex-row')
+
+
+        tableBody.appendChild(tr)
+        tr.appendChild(th)
+        tr.appendChild(td1)
+        tr.appendChild(td2)
+        tr.appendChild(td3)
+       
+        for(item2 of item.comentario) {
+            td1.innerText = item2
+        }
+        for(item2 of item.nome) {
+            td2.innerText = item2
+        }
+
+    }
+}
