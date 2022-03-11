@@ -1,3 +1,18 @@
+const { response } = require("express")
+const express = require("express")
+const { request } = require("http")
+const app = express()
+
+app.get("/", (request, response) => {
+    response.send('hello world')
+})
+
+const PORT = process.env.PORT || 5000
+
+app.listen(PORT, () => {
+    console.log(PORT)
+})
+
 const vini = {
     conhecimento: '   Portugol; Considero o Portugol uma ferramenta muito importante para o meu aprendizado sobre a lógica da programação. Python; Com Python eu consigo programar até o que eu aprendi com portugol não é muito, mas foi a primeira linguagem que eu tentei aprender. HTML5; Vou colocar na lista mesmo não sendo linguagem de programação, eu não conheço todas as tags mas as principais eu conheço. CSS3; Em CSS eu considero que eu tenho nível intermediário.',
     objetivo: '   Eu tenho a pretensão de ser um proficional de destaque e reconhecimento nessa área já que eu escolhi que eu vou trabalhar com isso pelo resto da minha vida, eu ainda não decide se eu quero ser dono de algum empreendimento nessa área. Mas de qualquer forma eu acho cedo pra pensar nisso, primeiro eu tenho que me colocar no mercado. Esses são alguns dos meus objetivos pra minha carreira proficional.',
